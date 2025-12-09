@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { RiskBadge } from "@/components/RiskBadge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Table,
   TableBody,
@@ -12,17 +12,59 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Calendar, ArrowRight, Plus } from "lucide-react";
-import historyData from "@/mock/history.json";
+import { subDays } from "date-fns";
 
+// Generate dynamic history based on current date
+const generateHistoryData = () => {
+  const today = new Date();
+  return [
+    {
+      id: "eval-001",
+      date: subDays(today, 2),
+      score: 78,
+      risk: "Medium",
+      summary: "Good coverage, minor issues with test stability",
+    },
+    {
+      id: "eval-002",
+      date: subDays(today, 5),
+      score: 91,
+      risk: "Low",
+      summary: "Strong test depth, clean code review",
+    },
+    {
+      id: "eval-003",
+      date: subDays(today, 9),
+      score: 66,
+      risk: "High",
+      summary: "Logs contain errors, missing acceptance criteria",
+    },
+    {
+      id: "eval-004",
+      date: subDays(today, 14),
+      score: 85,
+      risk: "Low",
+      summary: "Excellent PR quality, all tests passing",
+    },
+    {
+      id: "eval-005",
+      date: subDays(today, 21),
+      score: 72,
+      risk: "Medium",
+      summary: "Static analysis warnings need attention",
+    },
+  ];
+};
 const History = () => {
+  const historyData = generateHistoryData();
   const getScoreColor = (score: number) => {
     if (score >= 80) return "text-risk-low";
     if (score >= 60) return "text-risk-medium";
     return "text-risk-high";
   };
 
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString("en-US", {
+  const formatDate = (date: Date) => {
+    return date.toLocaleDateString("en-US", {
       month: "short",
       day: "numeric",
       year: "numeric",

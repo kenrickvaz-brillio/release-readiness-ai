@@ -71,7 +71,7 @@ const Evaluate = () => {
                     <LinkIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                     <Input
                       id="jira"
-                      placeholder="https://jira.example.com/browse/PROJ-123"
+                      defaultValue="https://jira.acme.io/browse/USER-4521"
                       className="pl-10 bg-secondary/30 border-border"
                     />
                   </div>
@@ -86,7 +86,7 @@ const Evaluate = () => {
                     <LinkIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                     <Input
                       id="pr"
-                      placeholder="https://github.com/org/repo/pull/123"
+                      defaultValue="https://github.com/acme/web-app/pull/892"
                       className="pl-10 bg-secondary/30 border-border"
                     />
                   </div>
@@ -101,7 +101,11 @@ const Evaluate = () => {
                     <GitCommit className="absolute left-3 top-3 w-4 h-4 text-muted-foreground" />
                     <Textarea
                       id="commits"
-                      placeholder="Paste commit messages here..."
+                      defaultValue={`feat(user-profile): add email validation on profile update
+fix(auth): resolve token refresh race condition
+refactor(utils): extract date formatting helpers
+test(user-profile): add unit tests for validation logic
+chore: update dependencies to latest versions`}
                       className="pl-10 min-h-[100px] bg-secondary/30 border-border resize-none"
                     />
                   </div>
