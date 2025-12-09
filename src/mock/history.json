@@ -1,0 +1,37 @@
+[
+  {
+    "id": "eval-001",
+    "date": "2024-11-15",
+    "score": 78,
+    "risk": "Medium",
+    "summary": "Good coverage, minor issues with test stability"
+  },
+  {
+    "id": "eval-002",
+    "date": "2024-11-09",
+    "score": 91,
+    "risk": "Low",
+    "summary": "Strong test depth, clean code review"
+  },
+  {
+    "id": "eval-003",
+    "date": "2024-11-01",
+    "score": 66,
+    "risk": "High",
+    "summary": "Logs contain errors, missing acceptance criteria"
+  },
+  {
+    "id": "eval-004",
+    "date": "2024-10-28",
+    "score": 85,
+    "risk": "Low",
+    "summary": "Excellent PR quality, all tests passing"
+  },
+  {
+    "id": "eval-005",
+    "date": "2024-10-20",
+    "score": 72,
+    "risk": "Medium",
+    "summary": "Static analysis warnings need attention"
+  }
+]
