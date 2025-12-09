@@ -148,3 +148,8 @@
     transform: translateX(0);
   }
 }
+
+#lovable-badge {
+  display: none;
+  opacity: 0;
+}
