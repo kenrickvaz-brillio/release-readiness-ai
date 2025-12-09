@@ -1,0 +1,42 @@
+{
+  "score": 82,
+  "risk": "Medium",
+  "summary": "The feature is mostly ready for release with a few moderate risks.",
+  "breakdown": {
+    "requirements": 18,
+    "tests": 20,
+    "prQuality": 16,
+    "staticAnalysis": 12,
+    "logs": 7,
+    "deployment": 9
+  },
+  "jiraFindings": [
+    "Acceptance criteria are mostly clear but missing edge cases.",
+    "User impact described well."
+  ],
+  "prFindings": [
+    "PR description is structured.",
+    "2 minor areas need refactoring."
+  ],
+  "testFindings": [
+    "Unit tests cover core logic.",
+    "One test is flaky and intermittently failing."
+  ],
+  "staticAnalysisFindings": [
+    "4 lint warnings.",
+    "No security hotspots detected."
+  ],
+  "logFindings": [
+    "Minor warnings detected in build logs."
+  ],
+  "deploymentFindings": [
+    "Environment variables configured correctly.",
+    "Staging deployment successful."
+  ],
+  "suggestedFixes": [
+    "Add test coverage for negative flows.",
+    "Resolve lint warnings.",
+    "Refactor repeated logic in file utils.js."
+  ],
+  "releaseNotes": "This release includes improvements to user profile management, updated validation rules, and fixes for reported issues."
+}
